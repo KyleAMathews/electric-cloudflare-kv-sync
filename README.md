@@ -10,7 +10,7 @@ Maintaining a cache isn't ideal as you either need to hook up cache invalidation
 
 Sync Engines like [ElectricSQL](https://next.electric-sql.com/) are a systematic fix to these sorts of "I want an up-to-date copy of some Postgres data in this other system". Electric lets you subscribe to what we call a [shape](https://next.electric-sql.com/guides/shapes), which is basically a table with a where clause, and then any changes to the database within that shape will be sent to subscribers
 
-Check out the demo.
+Check out the demo (sound on).
 
 https://github.com/user-attachments/assets/cebc1eaf-d8ae-4603-83fa-920b974bc04d
 
