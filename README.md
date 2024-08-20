@@ -12,7 +12,7 @@ Sync Engines like [ElectricSQL](https://next.electric-sql.com/) are a systematic
 
 Check out the demo.
 
-INSERT VIDEO
+https://github.com/user-attachments/assets/cebc1eaf-d8ae-4603-83fa-920b974bc04d
 
 The sync code is in `kv-sync.ts` and worker code in `worker.ts`.
 
