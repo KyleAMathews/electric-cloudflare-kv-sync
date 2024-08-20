@@ -33,7 +33,7 @@ export default {
           const value = await env.organizations.get(name)
           return JSON.parse(value)
         }))
-        return new Response(JSON.stringify(values));
+        return new Response(JSON.stringify(values, null, 4));
       }
     } catch (err) {
       console.error(`KV returned error: ${err}`)
