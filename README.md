@@ -4,7 +4,7 @@ Demo showing how to sync data with ElectricSQL from Postgres to Cloudflare's Wor
 
 Edge Workers often need instant access to Postgres data.
 
-Alternatives are poor:
+The typical options are poor:
 
 - Querying to the db is slow.
 - Maintaining a cache isn't ideal as you either need to hook up cache invalidation or accept stale data.
