@@ -2,11 +2,12 @@
 
 Demo showing how to sync data with ElectricSQL from Postgres to Cloudflare's Workers KV
 
-Edge Workers often need very quick access to data.
+Edge Workers often need instant access to Postgres data.
 
-Querying to the db is slow.
+Alternatives are poor:
 
-Maintaining a cache isn't ideal as you either need to hook up cache invalidation or accept stale data.
+- Querying to the db is slow.
+- Maintaining a cache isn't ideal as you either need to hook up cache invalidation or accept stale data.
 
 Sync Engines like [ElectricSQL](https://next.electric-sql.com/) are a systematic fix to these sorts of "I want an up-to-date copy of some Postgres data in this other system". Electric lets you subscribe to what we call a [shape](https://next.electric-sql.com/guides/shapes), which is basically a table with a where clause, and then any changes to the database within that shape will be sent to subscribers
 
