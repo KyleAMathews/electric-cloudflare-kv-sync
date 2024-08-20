@@ -1,0 +1,7 @@
+name = "electric-sync-kv-example"
+main = "worker.ts"
+compatibility_date = "2024-08-06"
+
+kv_namespaces = [
+  { binding = "organizations", id = "1e12706189a24be08a1a8446dd75a672" }
+]

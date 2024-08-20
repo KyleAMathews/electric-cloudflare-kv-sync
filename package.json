@@ -1,0 +1,32 @@
+{
+  "name": "electric-cloudflare-kv-sync",
+  "description": "Demo showing how to sync data with ElectricSQL from Postgres to Cloudflare's Workers KV",
+  "version": "1.0.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/KyleAMathews/electric-cloudflare-kv-sync/issues"
+  },
+  "dependencies": {
+    "@cloudflare/workers-types": "^4.20240806.0",
+    "@databases/pg-migrations": "^5.0.3",
+    "@electric-sql/client": "^0.3.1",
+    "dotenv-cli": "^7.4.2",
+    "wrangler": "^3.72.0"
+  },
+  "homepage": "https://github.com/KyleAMathews/electric-cloudflare-kv-sync#readme",
+  "keywords": [
+    "cloudflare",
+    "electricsql"
+  ],
+  "license": "Unlicense",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KyleAMathews/electric-cloudflare-kv-sync.git"
+  },
+  "scripts": {
+    "backend:down": "docker compose  --env-file .env.dev -f docker-compose.yaml down --volumes",
+    "backend:up": "docker compose --env-file .env.dev -f docker-compose.yaml up -d && npm run db:migrate",
+    "db:migrate": "dotenv -e .env.dev -- npx pg-migrations apply --directory ./db/migrations",
+    "start": "wrangler dev"
+  }
+}
